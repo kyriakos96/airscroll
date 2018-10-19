@@ -5,6 +5,7 @@ import {Button, ListGroup, Nav, NavItem, NavLink, TabContent, TabPane} from 'rea
 
 import classnames from 'classnames';
 import MonthlyRevenue from '../../../../../components/dashboard/default/MonthlyRevenue';
+import {chartDataWithoutAxis} from '../ECommerce/data'
 import {
     cardData,
     cardData1,
@@ -26,7 +27,7 @@ import UserDetailTable from '../../../../../components/dashboard/Common/UserDeta
 import UserProfileCard from '../../../../../components/dashboard/Common/userProfileCard/UserProfileCard';
 import MarketingTable from '../../../../../components/dashboard/Common/MarketingTable';
 import RecentActivities from '../../../../../components/dashboard/Common/RecentActivities/index';
-// import {projects, recentList} from '../Intranet/data';
+import {projects, recentList} from '../Intranet/data';
 import ProjectsList from '../../../../../components/dashboard/Common/ProjectsList';
 import CountryListBadges from "../../../../../components/dashboard/Common/CountryListBadges";
 import WeatherList from "../../../../../components/dashboard/Common/WeatherList";
@@ -58,7 +59,6 @@ class Default extends Component {
     }
 
     render() {
-        console.log("SSSSSSSS");
         return (
             <div className="dashboard animated slideInUpTiny animation-duration-3">
                 <ContainerHeader match={this.props.match} title={<IntlMessages id="sidebar.dashboard"/>}/>

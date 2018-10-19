@@ -1,6 +1,6 @@
 import React from 'react';
 import {CartesianGrid, Line, LineChart, ResponsiveContainer, XAxis, YAxis,} from 'recharts';
-import {data} from '../../../data'
+import {data} from '../../Components/data'
 
 const LineChartRevenue = () => (
     <ResponsiveContainer width="100%" height={350}>

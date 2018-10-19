@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
 import SideNavOption from './SideNavOption';
 import Switch from "react-toggle-switch";
-import {changeDirection, setDarkTheme, setThemeColor} from 'actions/index';
+import {changeDirection, setDarkTheme, setThemeColor} from '../../actions/index';
 import {
     AMBER,
     BLUE,
@@ -22,7 +22,7 @@ import {
     GREEN,
     INDIGO,
     PINK
-} from 'constants/ThemeColors';
+} from '../../constants/ThemeColors';
 
 class ColorOption extends React.Component {
 

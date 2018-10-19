@@ -1,10 +1,20 @@
 import {applyMiddleware, compose, createStore} from "redux";
 import reducers from "../reducers/index";
-import ReduxPromise from 'redux-promise';
+import createHistory from "history/createHashHistory";
+import {routerMiddleware} from "react-router-redux";
 
-export default function configureStore() {
-    const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
-    const store = createStoreWithMiddleware(reducers);
+
+const history = createHistory();
+const routeMiddleware = routerMiddleware(history);
+
+const middlewares = [routeMiddleware];
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+//(__REDUX_DEVTOOLS_EXTENSION_COMPOSE__)use only for  development time
+
+export default function configureStore(initialState) {
+    const store = createStore(reducers, initialState,
+        composeEnhancers(applyMiddleware(...middlewares)));
+
 
     if (module.hot) {
         // Enable Webpack hot module replacement for reducers
@@ -15,3 +25,4 @@ export default function configureStore() {
     }
     return store;
 }
+export {history};

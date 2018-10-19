@@ -14,7 +14,7 @@ import UserInfo from '../UserInfo';
 import Menu from "../Header/Menu";
 
 class Header extends React.Component {
-ß
+
 
     onAppNotificationSelect = () => {
         this.setState({
@@ -28,8 +28,9 @@ class Header extends React.Component {
     };
 
     onUserInfoSelect = () => {
+        // FIXME: fix when handling authentication
         this.setState({
-            userInfo: !this.state.userInfo
+            userInfo: true
         })
     };
 

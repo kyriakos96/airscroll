@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux'
 import IntlMessages from '../../util/IntlMessages';
 
 class UserInfo extends React.Component {
@@ -21,7 +22,9 @@ class UserInfo extends React.Component {
                         <i className="zmdi zmdi-settings zmdi-hc-fw mr-1"/>
                         <IntlMessages id="popup.setting"/>
                     </a>
-                    <a className="dropdown-item text-muted" href="javascript:void(0)">
+                    <a className="dropdown-item text-muted" href="javascript:void(0)" onClick={() => {
+                        console.log("Try to logoput");
+                    }}>
                         <i className="zmdi zmdi-sign-in zmdi-hc-fw mr-1"/>
                         <IntlMessages id="popup.logout"/>
                     </a>
@@ -30,6 +33,6 @@ class UserInfo extends React.Component {
     }
 }
 
-export default UserInfo;
+export default connect(null, {})(UserInfo);
 
 
