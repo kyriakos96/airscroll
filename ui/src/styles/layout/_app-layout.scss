@@ -1,0 +1,98 @@
+/*App Layout Styles*/
+
+#app-site,
+.app-main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.app-container {
+  @include display-flex(flex, row, nowrap);
+  width: 100%;
+}
+
+.app-sidebar {
+  @include display-flex(flex, column, nowrap);
+  width: $side-nav-width;
+  min-width: $side-nav-width;
+  max-width: $side-nav-width;
+}
+
+.app-main-container {
+  @include display-flex(flex, column, nowrap);
+  width: calc(100% - #{$side-nav-width});
+  position: relative;
+
+  .collapsible-drawer & {
+    width: 100%;
+  }
+
+  .mini-drawer & {
+    width: calc(100% - #{$mini-drawer-width});
+  }
+
+  &.app-main-container-horizontal {
+    width: 100% !important;
+  }
+
+  @media screen and (max-width: 1199px) {
+    width: 100%;
+  }
+}
+
+.app-header {
+  min-height: $app-bar-height;
+  z-index: 1001;
+  position: relative;
+
+  &.app-header-horizontal-top-below {
+    min-height: $app-bar-height + 47px;
+
+    @media screen and (max-width: 767px) {
+      min-height: $app-bar-height;
+    }
+  }
+}
+
+.app-main-content-wrapper {
+  flex: 1;
+  @include display-flex(flex, column, nowrap);
+  width: 100%;
+}
+
+.app-container {
+  &.fixed-drawer {
+    & .app-header .app-main-header {
+      width: auto !important;
+    }
+  }
+
+  &.collapsible-drawer {
+    & .app-header .app-main-header {
+      width: auto !important;
+      left: 0;
+    }
+
+    & .app-main-container {
+      position: relative;
+    }
+  }
+
+  &.mini-drawer {
+    & .app-header .app-main-header {
+      width: auto !important;
+      left: $mini-drawer-width;
+    }
+
+    & .app-header-horizontal.app-header .app-main-header {
+      left: 0;
+    }
+
+    .app-sidebar {
+      width: $mini-drawer-width;
+      min-width: $mini-drawer-width;
+      max-width: $mini-drawer-width;
+    }
+  }
+}
