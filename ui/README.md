@@ -1371,7 +1371,7 @@ Different projects choose different testing tradeoffs based on how often compone
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from MainApp;
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -1415,7 +1415,7 @@ Now you can write a smoke test with it:
 ```js
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import App from MainApp;
 
 it('renders without crashing', () => {
   shallow(<App />);
@@ -1431,7 +1431,7 @@ Here is an example from Enzyme documentation that asserts specific output, rewri
 ```js
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import App from MainApp;
 
 it('renders welcome message', () => {
   const wrapper = shallow(<App />);
@@ -1500,7 +1500,7 @@ Here's an example of using `react-testing-library` and `jest-dom` for testing th
 ```js
 import React from 'react';
 import { render } from 'react-testing-library';
-import App from './App';
+import App from MainApp;
 
 it('renders welcome message', () => {
   const { getByText } = render(<App />);
@@ -1949,16 +1949,16 @@ for more details about this behavior.
 
 ### Progressive Web App Metadata
 
-The default configuration includes a web app manifest located at
-[`public/manifest.json`](public/manifest.json), that you can customize with
-details specific to your web application.
+#The default configuration includes a web app manifest located at
+#[`public/manifest.json`](public/manifest.json), that you can customize with
+#details specific to your web application.
 
-When a user adds a web app to their homescreen using Chrome or Firefox on
-Android, the metadata in [`manifest.json`](public/manifest.json) determines what
-icons, names, and branding colors to use when the web app is displayed.
-[The Web App Manifest guide](https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/)
-provides more context about what each field means, and how your customizations
-will affect your users' experience.
+#When a user adds a web app to their homescreen using Chrome or Firefox on
+#Android, the metadata in [`manifest.json`](public/manifest.json) determines what
+#icons, names, and branding colors to use when the web app is displayed.
+#[The Web App Manifest guide](https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/)
+#provides more context about what each field means, and how your customizations
+#will affect your users' experience.
 
 Progressive web apps that have been added to the homescreen will load faster and
 work offline when there's an active service worker. That being said, the
@@ -2087,7 +2087,7 @@ service worker navigation routing can be configured or disabled by
 and [`navigateFallbackWhitelist`](https://github.com/GoogleChrome/sw-precache#navigatefallbackwhitelist-arrayregexp)
 options of the `SWPreachePlugin` [configuration](../config/webpack.config.prod.js).
 
-When users install your app to the homescreen of their device the default configuration will make a shortcut to `/index.html`. This may not work for client-side routers which expect the app to be served from `/`. Edit the web app manifest at [`public/manifest.json`](public/manifest.json) and change `start_url` to match the required URL scheme, for example:
+#When users install your app to the homescreen of their device the default configuration will make a shortcut to `/index.html`. This may not work for client-side routers which expect the app to be served from `/`. Edit the web app manifest at [`public/manifest.json`](public/manifest.json) and change `start_url` to match the required URL scheme, for example:
 
 ```js
   "start_url": ".",
