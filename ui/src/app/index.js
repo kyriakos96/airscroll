@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route, Switch, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
-import Header from '../components/Header/index';
+import Header from '../components/header/index';
 import Sidebar from '../containers/SideNav/index';
 import Footer from '../components/Footer';
 import Dashboard from './routes/dashboard';
@@ -34,7 +34,7 @@ class App extends React.Component {
         }
         return (
             <div className={`app-container ${drawerStyle}`}>
-                <Tour/>
+                {/*<Tour/>*/}
 
                 <Sidebar/>
                 <div
@@ -60,7 +60,8 @@ class App extends React.Component {
                         <Footer/>
                     </main>
                 </div>
-                <ColorOption/>
+                {/*Color Option enables Color Customizer on main screen*/}
+                {/*<ColorOption/>*/}
             </div>
         );
     }

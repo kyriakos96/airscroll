@@ -11,25 +11,6 @@ export const chartData = [
     {name: '15.00', uv: 1000, pv: 2100, amt: 20},
 ];
 
-export const chartData1 = [
-    {name: 'Let A', uv: 20, pv: 40, amt: 20},
-    {name: 'Let B', uv: 60, pv: 25, amt: 21},
-    {name: 'Let C', uv: 20, pv: 98, amt: 29},
-    {name: 'Let D', uv: 50, pv: 39, amt: 20},
-    {name: 'Let E', uv: 30, pv: 60, amt: 28},
-    {name: 'Let F', uv: 70, pv: 38, amt: 20},
-    {name: 'Let G', uv: 56, pv: 43, amt: 20},
-];
-export const chartData2 = [
-    {name: 'Let A', uv: 40, pv: 24, amt: 20},
-    {name: 'Let B', uv: 10, pv: 13, amt: 21},
-    {name: 'Let C', uv: 60, pv: 98, amt: 29},
-    {name: 'Let D', uv: 27, pv: 15, amt: 20},
-    {name: 'Let E', uv: 56, pv: 45, amt: 28},
-    {name: 'Let F', uv: 23, pv: 56, amt: 20},
-    {name: 'Let G', uv: 56, pv: 43, amt: 20},
-];
-
 export const expanseData = [
     {name: 'Jan', Income: 10, Expanse: 22},
     {name: 'Feb', Income: 5, Expanse: 20},

@@ -56,7 +56,7 @@ class ColorOption extends React.Component {
     }
 
     render() {
-        const {themeColor, darkTheme, isDirectionRTL, navigationStyle} = this.props;
+        const {themeColor, darkTheme, isDirectionRTL} = this.props;
         return (
 
             <div className="theme-option">

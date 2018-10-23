@@ -21,7 +21,7 @@ const initialSettings = {
     darkTheme: true,
     width: window.innerWidth,
     isDirectionRTL: false,
-    navigationStyle: VERTICAL_NAVIGATION,
+    navigationStyle: HORIZONTAL_NAVIGATION,
     horizontalNavPosition: INSIDE_THE_HEADER,
     locale: {
         languageId: 'english',

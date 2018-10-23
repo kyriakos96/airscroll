@@ -1,7 +1,7 @@
 {
-  "sidebar.main": "Main",
+  "sidebar.main": "Home",
   "sidebar.dashboard": "Dashboard",
-  "sidebar.dashboard.default": "Default",
+  "sidebar.dashboard.default": "Dashboard",
   "sidebar.dashboard.ecommerce": "eCommerce",
   "sidebar.dashboard.news": "News",
   "sidebar.dashboard.intranet": "Intranet",
